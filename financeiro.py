@@ -10,7 +10,7 @@
 def calcular_juros(juro):
     while True:
         c = input("\nQual o capital inicial? ")
-        if not c.isdigit():
+        if not c.replace(".","",1).isdigit():
             print("Apenas números são permitidos. Tente novamente.")
             continue
         c = float(c)
@@ -18,7 +18,7 @@ def calcular_juros(juro):
 
     while True:
         i = input("\nQual a taxa de juros? ")
-        if not i.isdigit():
+        if not i.replace(".","",1).isdigit():
             print("Apenas números são permitidos. Tente novamente.")
             continue
         i = float(i)/100
@@ -26,7 +26,7 @@ def calcular_juros(juro):
 
     while True:
         t = input("\nAo decorrer de quantos anos? ")
-        if not t.isdigit():
+        if not t.replace(".","",1).isdigit():
             print("Apenas números são permitidos. Tente novamente.")
             continue
         t = float(t)
@@ -67,7 +67,5 @@ def main():
             case 3:
                 print("Saindo...")
                 break
-
-
 
 main()
